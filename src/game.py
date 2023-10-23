@@ -4,9 +4,6 @@ import pyautogui
 import mss  # https://python-mss.readthedocs.io/index.html
 from time import sleep
 
-#from element import detect_element_inst
-
-
 pyautogui.FAILSAFE = False
 
 sct = mss.mss()
@@ -86,22 +83,18 @@ def click_template_image(
 
 close_buttons = [
     "back_button.png",
-    "back_relic1.png",
-    "back_hospital1.png",
-    "yes_close_offer.png",
+    "back_hospital1.PNG",
+    "back_relic1.PNG",
+    "cavalry1.PNG",
+    "complete1.PNG",
+    "gold_full1.PNG",
 ]
 
 valuables = [
-    "gold_full1.png",
-    "shieldmen1.png",
-    "relic_free1.png",
-    "relic_free2.png",
-    "relic_full1.png",
-    "relic1.png"
-]
-
-back_buttons = [
-   "back_button.png" 
+    "relic_free1.PNG",
+    "relic_free2.PNG",
+    "relic1.PNG",
+    "relic_full1.PNG",
 ]
 
 while True:
@@ -111,6 +104,3 @@ while True:
 
         for close_button_image in close_buttons:
             click_template_image("images/" + close_button_image)
-            
-            for back_buttons_image in back_buttons:
-                click_template_image("images/" + back_buttons_image)
