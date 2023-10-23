@@ -4,9 +4,6 @@ import pyautogui
 import mss  # https://python-mss.readthedocs.io/index.html
 from time import sleep
 
-#from element import detect_element_inst
-
-
 pyautogui.FAILSAFE = False
 
 sct = mss.mss()
@@ -14,6 +11,50 @@ default_monitor = sct.monitors[
     1
 ]  # https://python-mss.readthedocs.io/api.html#mss.tools.mss.base.MSSBase.monitors
 
+def click_element(xy):
+    xy_l = xy.split()
+    click_x = xy_l[0]
+    click_y = xy_l[1]
+
+    pyautogui.clikc(x=click_x, y=click_y)
+
+def detect_element(image):
+    detected = False
+    detected_element = None
+    while True:
+        for i in image_list:
+        #image finding algo
+        detected = True
+        detected_element = image[i]
+        detected_element_coord = 
+        break
+    result_string = None
+    if detected == True:
+        r1 = "T"
+    else:
+        r1 = "false"
+
+    if detected_element != None:
+        r2 = detected_element
+
+
+    rfinal = r1+","+r2
+    return rfinal
+    #123,456
+relic = image_path(relic.png)
+
+def detect_and_click(image_path):
+    element = detect_element(image_path)
+    click_element(element)
+
+
+
+relic_element = detect_element(relic)
+click_element(relic_element)
+return_element = detect_element(back)
+click_element(return_element)
+
+click_element(123,456)
 
 def click_template_image(
     template_image_path: str,
@@ -95,10 +136,13 @@ valuables = [
     "cash.png",
     "star.png",
     "key.png",
+    "relic_1.png",
+    "free_2.png",
+    "free_1.png",
 ]
 
-back_buttons = [
-   "back_button.png" 
+return_buttons = [
+    "return.png",
 ]
 
 while True:
@@ -108,6 +152,14 @@ while True:
 
         for close_button_image in close_buttons:
             click_template_image("images/" + close_button_image)
-            
-            for back_buttons_image in back_buttons:
-                click_template_image("images/" + back_buttons_image)
+
+            for return_button_image in return_buttons:
+                click_template_image("images/" + return_button_image)
+
+
+while True:
+    capture_monitor()
+    element_sequence() #order: find resoure > collect resource > exit to main
+        detect_button()
+        click_button()
+
