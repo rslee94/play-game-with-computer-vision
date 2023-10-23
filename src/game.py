@@ -85,16 +85,19 @@ def click_template_image(
 
 
 close_buttons = [
-    "close.png",
-    "close_big.png",
-    "continue_level.png",
+    "back_button.png",
+    "back_relic1.png",
+    "back_hospital1.png",
     "yes_close_offer.png",
 ]
 
 valuables = [
-    "cash.png",
-    "star.png",
-    "key.png",
+    "gold_full1.png",
+    "shieldmen1.png",
+    "relic_free1.png",
+    "relic_free2.png",
+    "relic_full1.png",
+    "relic1.png"
 ]
 
 back_buttons = [
